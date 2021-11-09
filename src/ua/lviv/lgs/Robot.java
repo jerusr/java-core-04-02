@@ -2,15 +2,21 @@ package ua.lviv.lgs;
 
 public class Robot {
 	
-	private String work;
+	private String act;
+	private String name;
 	
-	Robot (String work){
-		this.work = work;
+	Robot (String act, String name){
+		this.act = act;
+		this.name = name;
 
 	}
+	
+	public Robot() {
+		this.name = "Robot";
+		this.act = "просто працюю";
+	}
 
-	@Override
-	public String toString() {
-		return "" + work + "";
+	public void work () {
+		System.out.println("Я " + this.name + " - я " + this.act);
 	}
 }

@@ -2,17 +2,24 @@ package ua.lviv.lgs;
 
 public class Application {
 	public static void main(String[] args) {
-		Robot R = new Robot("я Robot Ц € просто працюю");
-		Robot Coffe = new Robot("я CoffeRobot Ц € варю каву");
-		Robot Dancer = new Robot("я RobotDancer Ц € просто танцюю");
-		Robot Coocker = new Robot("я RobotCoocker Ц € просто готую");
-			
+		
+		Robot R = new Robot ();
+		CoffeRobot coffeRobot = new CoffeRobot();
+		RobotDancer robotDancer = new RobotDancer();
+		RobotCoocker robotCoocker = new RobotCoocker();
+		
+		R.work();
+		coffeRobot.work();
+		robotDancer.work();
+		robotCoocker.work();
+		
+		
 // ћассив ≥ цикл for
 		Robot[] array = new Robot[4];
 		array[0] = R;
-		array[1] = Coffe;
-		array[2] = Dancer;
-		array[3] = Coocker;
+		array[1] = coffeRobot;
+		array[2] = robotDancer;
+		array[3] = robotCoocker;
 		for (int i = 0; i < 4; i++) {
 			System.out.println(array[i]);
 		}
